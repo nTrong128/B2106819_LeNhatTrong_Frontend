@@ -1,20 +1,22 @@
 <script>
+import AppHeader from "@/components/AppHeader.vue";
 export default {
-}
+  components: {
+    AppHeader,
+  },
+};
 </script>
 <template>
-  <h1>Hello, Vue.js!</h1>
+  <div id="app">
+    <AppHeader />
+    <div class="container mt-3">
+      <router-view />
+    </div>
+  </div>
 </template>
 <style>
 .page {
   max-width: 400px;
   margin: auto;
-}
-
-h1 {
-  color: #42b983;
-  font-size: 2em;
-  text-align: center;
-  margin-top: 20px;
 }
 </style>
