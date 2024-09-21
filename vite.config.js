@@ -13,12 +13,12 @@ export default defineConfig({
   },
   server: {
     port: 3001,
-  },
-  // Redirect all requests starting with /api to the server running on port 3000
-  proxy: {
-    "/api": {
-      target: "http://localhost:3000",
-      changeOrigin: true,
+    // Redirect all requests starting with /api to the server running on port 3000
+    proxy: {
+      "/api": {
+        target: "http://localhost:3000",
+        changeOrigin: true,
+      },
     },
   },
 });
